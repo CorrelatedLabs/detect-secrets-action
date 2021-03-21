@@ -14,6 +14,7 @@ lines=`cat output.json | jq .results | wc -l`
 echo $lines
 
 if [ "$lines" -gt 1 ]; then
-    echo "Secret Check Failed"
+    echo "Secret Check Failed with $lines new secrets found"
+    cat output.json
     exit 1
 fi
