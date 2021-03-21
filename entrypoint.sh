@@ -3,7 +3,7 @@ set -e
 
 cd $GITHUB_WORKSPACE
 
-detect-secrets-hook --baseline .secrets.baseline > output.json
+detect-secrets-hook --baseline .secrets.baseline $(git ls-files) > output.json
 
 lines=`cat output.json | jq .results | wc -l`
 
