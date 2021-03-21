@@ -9,4 +9,4 @@ branding:
   color: "gray-dark"
 outputs:
   output: # id of output
-    description: 'Scan Result'
+    description: 'Secrets scan result'
