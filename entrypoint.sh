@@ -3,12 +3,12 @@ set -e
 
 cd $GITHUB_WORKSPACE
 
-detect-secrets-hook --baseline .secrets.baseline $(git ls-files) > output.json
+detect-secrets-hook --baseline .secrets.baseline $(git ls-files) > output
 
-lines=`cat output.json | jq .results | wc -l`
+lines=`cat output.json | wc -l`
 
 if [ "$lines" -gt 1 ]; then
-    echo "Secret Check Failed with $lines new secrets found"
-    cat output.json
+    echo "Secret Check Failed"
+    cat output
     exit 1
 fi
