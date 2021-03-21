@@ -9,4 +9,4 @@ jobs:
     steps:
       - name: run detect secrets
         id: detect_secrets
-        uses: evanextreme/detect-secrets-action@v1.0.0
+        uses: CorrelatedLabs/detect-secrets-action@v1.0.0
