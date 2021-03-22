@@ -4,7 +4,8 @@ set -e
 cd $GITHUB_WORKSPACE
 
 echo "Running detect-secrets-hook to check for new secrets"
-detect-secrets-hook --baseline .secrets.baseline $(git diff master --name-only) > output
+git ls-files
+detect-secrets-hook --baseline .secrets.baseline $(git ls-files) > output
 
 exit_code=$?
 
