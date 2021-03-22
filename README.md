@@ -6,5 +6,5 @@ This github action scans a repository usuing Yelp's [Detect Secrets](https://git
 
 ```
 - name: Detect Secrets
-  uses: CorrelatedLabs/detect-secrets-action@0.0.9
+  uses: CorrelatedLabs/detect-secrets-action@0.0.10
 ```
