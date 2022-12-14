@@ -5,8 +5,6 @@ RUN set -eux \
     && apt-get update \
     && apt-get install -y --no-install-recommends git less bash gcc jq
 
-RUN git config --global --add safe.directory '*'
-
 COPY entrypoint.sh /entrypoint.sh
 
 ENTRYPOINT ["/entrypoint.sh"]
