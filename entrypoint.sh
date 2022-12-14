@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 
+git config --global --add safe.directory $GITHUB_WORKSPACE
 cd $GITHUB_WORKSPACE
 
 echo "Running detect-secrets-hook to check for new secrets"
